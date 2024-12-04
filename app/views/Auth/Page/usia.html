@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cek Usia</title>
+  </head>
+  <body>
+    <h1>Cek Usia Kamu</h1>
+    <form action="/usia" method="POST">
+      <label for="usia">Masukan angka usiamu</label>
+      <input type="number" name="usiamu" />
+      <button type="submit">Hitung Usia</button>
+    </form>
+    {% if usia_akhir is not none %}
+    <p>Usia mu sekarang {{ usia_akhir }}</p>
+    {% endif %}
+    <a href="/">Back</a>
+  </body>
+</html>
